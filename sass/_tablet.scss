@@ -1,0 +1,13 @@
+main{
+    #seccionPrincipal{
+        #seccionFiltros{
+            display: flex;
+            flex-direction: row;
+        }
+        #contenedorProductos{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+    }
+}

@@ -1,0 +1,116 @@
+.formulario{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 5px;
+    background-color: black;
+    color: white;
+    &__contenedor{
+        &--input{
+            position: relative;
+            .input{
+                width: 100%;
+                background-color: white;
+                border: 3px solid transparent;
+                height: 30px;
+                line-height: 40px;
+                transition: .3s ease all;
+                padding: 3px;
+                border-radius: 5px;
+            }
+            .input:focus{
+                outline: none;
+                box-shadow: 3px 0px 30px rgba(163,163,163,0.8);
+                border: 3px solid lightblue;
+            }
+            .validacionEstado{
+                position: absolute;
+                right: 10px;
+                bottom: 7px;
+                opacity: 0;
+            }
+        }
+        &--correcto{
+            // .input{
+            //     border: 3px solid greenyellow;
+            // }
+            // .input:focus{
+            //     border: 3px solid greenyellow;
+            // }
+            .validacionEstado{
+                color: greenyellow;
+                opacity: 1;
+            }            
+        }
+        &--incorrecto{
+            .input{
+                border: 3px solid red;
+            }
+            .input:focus{
+                border: 3px solid red;
+            }
+            .validacionEstado{
+                color: red;
+                opacity: 1;
+            }
+        }
+        &--mensajeError{
+            color: red;
+            display: none;
+            &-active{
+                display: block;
+            }
+        }
+        .formularioCheckbox{
+            margin-right: 10px;
+        }
+    }
+    &__mensaje{
+        background-color: red;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        display: none;
+        p{
+            margin: 0;
+        }
+        &--active{
+            display: block;
+        }
+    }
+    &__enviado{
+        background-color: green;
+        text-align: center;
+        height: 40px;
+        line-height: 40px;
+        display: none;
+        color: white;
+        p{
+            margin: 0;
+        }
+        &--active{
+            display: block;
+        }
+    }
+    &__btn{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &--enviar{
+            background-color: green;
+            width: 30%;
+            line-height: 50px;
+            height: 50px;
+            border: none;
+            border-radius: 3px;
+            color: white;
+            cursor: pointer;
+            transition: .1s ease all;
+            text-transform: uppercase;
+            font-weight: bold;
+        }
+        &--enviar:hover{
+            box-shadow: 3px 0px 30px rgba(163,163,163,0.9);
+        }
+    }
+}

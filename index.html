@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <!-- Fonts Awesome -->
+    <script src="https://kit.fontawesome.com/df59baf6b8.js" crossorigin="anonymous"></script>
+    <!-- Toastify -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <!-- Mi CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Tienda Manga</title>
+</head>
+<body>
+    <header>
+        <nav class="header">
+            <img class="header__logo" src="./img/logo.png" alt="">
+            <button id="btn-carrito">
+                <i class="fa fa-shopping-cart icon-carrito" aria-hidden="true"></i>
+                <span id="contadorCarrito">0</span>
+            </button>
+        </nav>
+    </header>
+    <main>
+        <!-- Carrusel -->
+        <div class="carrusel">
+            <div class="contenedorCarrusel">
+                <img src="./img/carrusel1.jpg" class="contenedorCarrusel__img" alt="">
+                <img src="./img/carrusel2.jpg" class="contenedorCarrusel__img" alt="">
+                <img src="./img/carrusel3.jpg" class="contenedorCarrusel__img" alt="">
+            </div>
+            <ul class="puntos">
+                <li class="punto" id="img1"></li>
+                <li class="punto" id="img2"></li>
+                <li class="punto" id="img3"></li>
+            </ul>
+        </div>
+        <!-- Reloj Ofertas -->
+        <h3>Envíos sin cargo y 12 cuotas sin interés por tiempo limitado</h3>
+        <div id="relojTemporizador">
+        </div>
+        <!-- Sección Principal -->
+        <div id="seccionPrincipal">
+            <div id="seccionFiltros">
+                <div id="buscador">
+                    <p>Buscar:</p>
+                    <input class="search" type="search" placeholder="TITULO - AUTOR - TOMO">
+                </div>
+                <div id="filtrarNombre">
+                    <p>Filtrar por título:</p>
+                    <select id="filtroNombre">
+                        <option value="Todos">Todos</option>
+                        <option value="Attack On Titan">Attack On Titan</option>
+                        <option value="Dragon Ball">Dragon Ball</option>
+                        <option value="Death Note">Death Note</option>
+                        <option value="Dr. Stone">Dr Stone</option>
+                        <option value="Evangelion">Evangelion</option>
+                        <option value="Fullmetal Alchemist">Fullmetal Alchemist</option>
+                        <option value="Jujutsu Kaisen">Jujutsu Kaisen</option>
+                        <option value="One Piece">One Piece</option>
+                        <option value="Sakura">Sakura</option>
+                    </select>
+                </div>
+            </div>
+            <div id="contenedorProductos">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="seccionRedes">
+            <h5 class="seccionRedes__titulo">Nuestras Redes</h1>
+            <div class="seccionRedes__redes">
+                <a href="https://www.instagram.com/" class="seccionRedes__redes--instagram">
+                    <i class="fa fa-instagram icon-ig" aria-hidden="true"></i>
+                </a>
+                <a href="https://twitter.com/" class="seccionRedes__redes--twitter">
+                    <i class="fa fa-twitter icon-tw" aria-hidden="true"></i>
+                </a>
+                <a href="http://facebook.com/" class="seccionRedes__redes--facebook">
+                    <i class="fa fa-facebook icon-fb" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+    <!-- Modal Carrito -->
+    <div class="modal-contenedor">
+        <div class="modal-carrito">
+            <h3>Productos seleccionados</h3>
+            <div id="contenedorCarrito">
+                <!-- <div class="productoEnCarrito">
+                    <p>Producto Nombre</p>
+                    <p>Precio: $</p>
+                    <p>Cantidad</p>
+                    <button class="boton-eliminar">QUITAR</button>
+                </div> -->
+            </div>
+            <div class="contenedorPrecioCierre">
+                <p class="precioProducto">Total: $<span id="precioTotal">0</span></p>
+                <div class="botonesModal">
+                    <button id="irPagar">COMPRAR</button>
+                    <button id="carritoCerrar">CERRAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal Pagar -->
+    <div class="contenedor-pagar">
+        <div class="modal-pagar">
+            <h3>Realice su pago</h3>
+            <div id="contenedorPago">
+            </div>
+            <div id="pagosBotones">
+                <button id="continuarCompra">CONTINUAR</button>
+                <button id="pagarCerrar">CERRAR</button>
+            </div>
+        </div>
+    </div>
+    <!-- Formulario -->
+    <!-- <form action="" id="formulario" class="formulario">
+        <h5>Complete sus datos</h5> 
+        <div class="formulario__contenedor" id="formulario__nombre">
+            <div class="formulario__contenedor--input">
+                <input type="text" class="input" name="nombre" id="nombre" placeholder="Nombre">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">No se admiten números y carácteres especiales</p>
+        </div>
+    
+        <div class="formulario__contenedor" id="formulario__apellido">
+            <div class="formulario__contenedor--input">
+                <input type="text" class="input" name="apellido" id="apellido" placeholder="Apellido">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">No se admiten números y carácteres especiales</p>
+        </div>
+    
+        <div class="formulario__contenedor" id="formulario__email">
+            <div class="formulario__contenedor--input">
+                <input type="email" class="input" name="email" id="email" placeholder="Correo Electrónico">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">Se admiten letras, números, @, puntos, guiones y guion bajo</p>
+        </div>
+    
+        <div class="formulario__contenedor" id="formulario__direccion">
+            <div class="formulario__contenedor--input">
+                <input type="text" class="input" name="direccion" id="direccion" placeholder="Dirección">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">No se admiten carácteres especiales</p>
+        </div>
+    
+        <div class="formulario__contenedor" id="formulario__numeroTarjeta">
+            <div class="formulario__contenedor--input">
+                <input type="number" class="input" name="numeroTarjeta" id="numeroTarjeta" placeholder="Numero de tarjeta">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">Debe introducir 16 dígitos</p>
+        </div>
+    
+        <div class="formulario__contenedor" id="formulario__nombreTarjeta">
+            <div class="formulario__contenedor--input">
+                <input type="text" class="input" name="nombreTarjeta" id="nombreTarjeta" placeholder="Nombre y Apellido que figura en la tarjeta">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">No se admiten números y carácteres especiales</p>
+        </div>
+    
+        <div class="formulario__contenedor" id="formulario__expiracion">
+            <div class="formulario__contenedor--input">
+                <input type="number" class="input" name="expiracion" id="expiracion" placeholder="Fecha de Expiración">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">Debe introducir 4 digitos MES-AÑO, ejemplo 1021</p>
+        </div>
+    
+        <div class="formulario__contenedor" id="formulario__codigoSeguridad">
+            <div class="formulario__contenedor--input">
+                <input type="number" class="input" name="codigoSeguridad" id="codigoSeguridad" placeholder="Código de seguridad">
+                <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+            </div>
+            <p class="formulario__contenedor--mensajeError">Debe introducir los 3 o 4 dígitos de seguridad del reverso de su tarjeta XXX</p>
+        </div>
+
+        <div class="formulario__contenedor" id="formulario__terminos">
+            <input type="checkbox" class="input formularioCheckbox" name="terminos" id="terminos">Acepto los términos y Condiciones
+        </div>
+    
+        <div class="formulario__enviado" id="formulario__enviado">
+            <p><i class="fa fa-check" aria-hidden="true"></i> ¡Compra confirmada!</p>
+        </div>
+    
+        <div class="formulario__mensaje" id="formulario__mensaje">
+            <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Complete el formulario</p>
+        </div>
+    
+        <div class="formulario__contenedor formulario__btn">
+            <button type="submit" class="formulario__btn--enviar">Confirmar</button>
+        </div>
+    </form> -->
+    <!-- Animación producto agregado -->
+    <div class="productoAgregado">
+    </div>
+    <!-- Toastify -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- Mi Formulario -->
+    <script src="./app/form.js"></script>
+    <!-- Mi App -->
+    <script src="./app/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,218 @@
+
+.modal-contenedor {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+    .modal-carrito {
+        position: relative;
+        background-color: white;
+        width: 100%;
+        max-height: 300px;
+        padding: 20px;
+        margin-top: -100%;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        box-shadow: 0px 10px 15px 0px rgba(0,0,0,0.6);
+        h3{
+            color: black;
+            font-size: 2em;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+        #contenedorCarrito{
+            height: 60%;
+            overflow-y: scroll;
+            .productoEnCarrito {
+                margin: 5px 0;
+                padding: 5px 10px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                
+                .img-carrito{
+                    width: 18px;
+                    height: 25px;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }  
+                .boton-eliminar {
+                    background-color: red;
+                    color: white;
+                    border: none;
+                    font-size: 1em;
+                    padding: 1%;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+            .productoEnCarrito:hover {
+                background-color: rgb(242, 177, 177);
+            }
+        }
+        .contenedorPrecioCierre{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-around;
+            .precioProducto{
+                font-size: 1.5em;
+            }
+            .botonesModal{
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-around;
+                #irPagar{
+                    font-size: 1.5em;
+                    color:white;
+                    border: none;
+                    background-color: green;
+                    padding: 2%;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    margin-right: 1rem;
+                }
+                #carritoCerrar{
+                    font-size: 1.5em;
+                    color:white;
+                    border: none;
+                    background-color: red;
+                    padding: 2%;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+.modal-active {
+    opacity: 1;
+    visibility: visible;
+    z-index: 5;
+    .modal-carrito{
+        margin-top: 0;
+    }
+}
+.contenedor-pagar{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all .5s;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.616);
+    .modal-pagar{
+        position: relative;
+        background-color: black;
+        color: white;
+        width: 100%;
+        height: auto;
+        padding: 10px;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        h3{
+            text-align: center;
+        }
+        #contenedorPago{
+            display: flex;
+            flex-direction: column;
+            padding: 1%;
+            margin: 1%;
+            border: 1px solid black;
+            align-items: center;
+            justify-content: center;
+            #seccionMetodoPago{
+                margin: 1%;
+                font-size: 1.1em;
+            }
+            #contenedorMetodoPago{
+                #contenedorEfectivo{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 1%;
+                    #totalPago{
+                        font-size: 2em;
+                    }
+                }
+                #contenedorTarjeta{
+                    display: flex;
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    margin: 1%;
+                    #calcularCuotas{
+                        margin: 1%;
+                        font-size: 1.1em;
+                    }
+                    #precioCuotas{
+                        font-size: 1.1em;
+                    }
+                }
+            }
+        }
+        #pagosBotones{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            #continuarCompra{
+                padding: 1%;
+                background-color: green;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1.1em;
+            }
+            #pagarCerrar{
+                padding: 1%;
+                background-color: red;
+                color: white;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 1.1em;
+            }
+        }
+    }
+}
+
+.modal-activado {
+    opacity: 1;
+    visibility: visible;
+    z-index: 100;
+}
+
+#error{
+    position: fixed;
+    top: 0;
+    z-index: 500;
+    background-color: red;
+    color: white;
+    padding: 3%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

@@ -1,0 +1,63 @@
+.carrusel{
+    width: 100%;
+    transition: all 0.4s ease;
+    overflow: hidden;
+    height: auto;
+    background-color: black;
+    padding-top: 2em;
+    height: 100%;
+    .contenedorCarrusel{
+        width: 300%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        transition: all .5s ease;
+        transform: translateX(0%);
+        height: 100%;
+        &__img{
+            width: calc(100%/3);
+            overflow-y: hidden;
+            margin: 3px;
+        }
+    }
+    .puntos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: center;
+        background-color: transparent;
+        position: relative;
+        top: -50px;
+        .punto{
+            width: 1em;
+            height: 1em;
+            background-color: white;
+            border-radius: 50%;
+            box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.6);
+            margin: 1em;
+            cursor: pointer;
+            z-index: 1;
+            
+        }
+        .punto:hover{
+            background-color: #e899dc;
+            background-image: linear-gradient(315deg, #e899dc 0%, #d387ab 74%);
+        }
+        .punto__activado{
+            background-color: #a4508b;
+            background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+        }
+    }
+}
+@media screen and (min-width:1024px){
+    .carrusel{
+        .contenedorCarrusel{
+            height: 30em;
+            object-position: center;
+        }
+    }
+}

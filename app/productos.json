@@ -1,0 +1,344 @@
+[
+    {
+        "id":1,
+        "nombre": "Attack On Titan",
+        "tomo":1,
+        "precio":650,
+        "autor": "Hajime Isayama",
+        "img": "./img/AOT1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":2,
+        "nombre": "Attack On Titan",
+        "tomo":2,
+        "precio":650,
+        "autor":"Hajime Isayama",
+        "img": "./img/aot2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":3,
+        "nombre": "Attack On Titan",
+        "tomo":3,
+        "precio":650,
+        "autor": "Hajime Isayama",
+        "img": "./img/aot3.jpg",
+        "cantidad":1
+    },
+    {
+        "id":4,
+        "nombre": "Attack On Titan",
+        "tomo":4,
+        "precio":650,
+        "autor": "Hajime Isayama",
+        "img": "./img/aot4.jpg",
+        "cantidad":1
+    },
+    {
+        "id":5,
+        "nombre": "Attack On Titan",
+        "tomo":5,
+        "precio":650,
+        "autor": "Hajime Isayama",
+        "img": "./img/aot5.jpg",
+        "cantidad":1
+    },
+    {
+        "id":6,
+        "nombre": "Dragon Ball",
+        "tomo":1,
+        "precio":450,
+        "autor": "Akira Toriyama",
+        "img": "./img/db1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":7,
+        "nombre": "Dragon Ball",
+        "tomo":2,
+        "precio":450,
+        "autor": "Akira Toriyama",
+        "img": "./img/db2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":8,
+        "nombre": "Dragon Ball",
+        "tomo":3,
+        "precio":450,
+        "autor": "Akira Toriyama",
+        "img": "./img/db3.jpg",
+        "cantidad":1
+    },
+    {
+        "id":9,
+        "nombre": "Dragon Ball",
+        "tomo":4,
+        "precio":450,
+        "autor": "Akira Toriyama",
+        "img": "./img/db4.jpg",
+        "cantidad":1
+    },
+    {
+        "id":10,
+        "nombre": "Dragon Ball",
+        "tomo":5,
+        "precio":450,
+        "autor": "Akira Toriyama",
+        "img": "./img/db5.jpg",
+        "cantidad":1
+    },
+    {
+        "id":11,
+        "nombre": "Death Note",
+        "tomo":1,
+        "precio":520,
+        "autor": "Tsugumi Ōba",
+        "img": "./img/deathnote1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":12,
+        "nombre": "Death Note",
+        "tomo":2,
+        "precio":520,
+        "autor": "Tsugumi Ōba",
+        "img": "./img/deathnote2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":13,
+        "nombre": "Death Note",
+        "tomo":3,
+        "precio":520,
+        "autor": "Tsugumi Ōba",
+        "img": "./img/deathnote3.jpg",
+        "cantidad":1
+    },
+    {
+        "id":14,
+        "nombre": "Death Note",
+        "tomo":4,
+        "precio":520,
+        "autor": "Tsugumi Ōba",
+        "img": "./img/deathnote4.jpg",
+        "cantidad":1
+    },
+    {
+        "id":15,
+        "nombre": "Death Note",
+        "tomo":5,
+        "precio":520,
+        "autor":"Tsugumi Ōba",
+        "img": "./img/deathnote5.jpg",
+        "cantidad":1
+    },
+    {
+        "id":16,
+        "nombre": "Dr. Stone",
+        "tomo":1,
+        "precio":370,
+        "autor": "Riichiro Inagaki",
+        "img": "./img/drstone1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":17,
+        "nombre": "Dr. Stone",
+        "tomo":2,
+        "precio":370,
+        "autor": "Riichiro Inagaki",
+        "img": "./img/drstone2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":18,
+        "nombre": "Dr. Stone",
+        "tomo":3,
+        "precio":370,
+        "autor": "Riichiro Inagaki",
+        "img": "./img/drstone3.jpg",
+        "cantidad":1
+    },
+    {
+        "id":19,
+        "nombre": "Dr. Stone",
+        "tomo":4,
+        "precio":370,
+        "autor": "Riichiro Inagaki",
+        "img": "./img/drstone4.jpg",
+        "cantidad":1
+    },
+    {
+        "id":20,
+        "nombre": "Dr. Stone",
+        "tomo":5,
+        "precio":370,
+        "autor": "Riichiro Inagaki",
+        "img": "./img/drstone5.jpg",
+        "cantidad":1
+    },
+    {
+        "id":21,
+        "nombre": "Dr. Stone",
+        "tomo":6,
+        "precio":370,
+        "autor": "Riichiro Inagaki",
+        "img": "./img/drstone6.png",
+        "cantidad":1
+    },
+    {
+        "id":22,
+        "nombre": "Evangelion",
+        "tomo":1,
+        "precio":480,
+        "autor": "Yoshiyuki Sadamoto",
+        "img": "./img/evangelion1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":23,
+        "nombre": "Evangelion",
+        "tomo":2,
+        "precio":480,
+        "autor": "Yoshiyuki Sadamoto",
+        "img": "./img/evangelion2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":24,
+        "nombre": "Evangelion",
+        "tomo":3,
+        "precio":480,
+        "autor": "Yoshiyuki Sadamoto",
+        "img": "./img/evangelion3.jpg",
+        "cantidad":1
+    },
+    {
+        "id":25,
+        "nombre": "Evangelion",
+        "tomo":4,
+        "precio":480,
+        "autor": "Yoshiyuki Sadamoto",
+        "img": "./img/evangelion4.jpg",
+        "cantidad":1
+    },
+    {
+        "id":26,
+        "nombre": "Fullmetal Alchemist",
+        "tomo":1,
+        "precio":600,
+        "autor": "Hiromu Arakawa",
+        "img": "./img/fma1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":27,
+        "nombre": "Fullmetal Alchemist",
+        "tomo":2,
+        "precio":600,
+        "autor": "Hiromu Arakawa",
+        "img": "./img/fma2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":28,
+        "nombre": "Fullmetal Alchemist"
+        ,"tomo":3,
+        "precio":600,
+        "autor": "Hiromu Arakawa",
+        "img": "./img/fma3.jpg",
+        "cantidad":1
+    },
+    {
+        "id":29,
+        "nombre": "Jujutsu Kaisen",
+        "tomo":9,
+        "precio":750,
+        "autor": "Gege Akutami",
+        "img": "./img/jujutsukaisen9.jpg",
+        "cantidad":1
+    },
+    {
+        "id":30,
+        "nombre": "Jujutsu Kaisen",
+        "tomo":10,
+        "precio":750,
+        "autor":"Gege Akutami",
+        "img": "./img/jujutsukaisen10.jpg",
+        "cantidad":1
+    },
+    {
+        "id":31,
+        "nombre": "One Piece",
+        "tomo":1,
+        "precio":650,
+        "autor": "Eiichirō Oda",
+        "img": "./img/op1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":32,
+        "nombre": "One Piece",
+        "tomo":2,
+        "precio":650,
+        "autor": "Eiichirō Oda",
+        "img": "./img/op2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":33,
+        "nombre": "One Piece",
+        "tomo":3,
+        "precio":650,
+        "autor": "Eiichirō Oda",
+        "img": "./img/op3.jpg",
+        "cantidad":1
+    },
+    {
+        "id":34,
+        "nombre": "One Piece",
+        "tomo":4,
+        "precio":650,
+        "autor": "Eiichirō Oda",
+        "img": "./img/op4.jpg",
+        "cantidad":1
+    },
+    {
+        "id":35,
+        "nombre": "One Piece",
+        "tomo":5,
+        "precio":650,
+        "autor": "Eiichirō Oda",
+        "img": "./img/op5.jpg",
+        "cantidad":1
+    },
+    {
+        "id":36,
+        "nombre": "Sakura",
+        "tomo":1,
+        "precio":390,
+        "autor": "CLAMP",
+        "img": "./img/sakura1.jpg",
+        "cantidad":1
+    },
+    {
+        "id":37,
+        "nombre": "Sakura",
+        "tomo":2,
+        "precio":390,
+        "autor": "CLAMP",
+        "img": "./img/sakura2.jpg",
+        "cantidad":1
+    },
+    {
+        "id":38,
+        "nombre": "Sakura",
+        "tomo":3,
+        "precio":390,
+        "autor": "CLAMP",
+        "img": "./img/sakura3.jpg",
+        "cantidad":1
+    }
+]

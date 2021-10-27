@@ -1,0 +1,1059 @@
+.modal-contenedor {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.modal-contenedor .modal-carrito {
+  position: relative;
+  background-color: white;
+  width: 100%;
+  max-height: 300px;
+  padding: 20px;
+  margin-top: -100%;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 10px 15px 0px rgba(0, 0, 0, 0.6);
+}
+
+.modal-contenedor .modal-carrito h3 {
+  color: black;
+  font-size: 2em;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.modal-contenedor .modal-carrito #contenedorCarrito {
+  height: 60%;
+  overflow-y: scroll;
+}
+
+.modal-contenedor .modal-carrito #contenedorCarrito .productoEnCarrito {
+  margin: 5px 0;
+  padding: 5px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.modal-contenedor .modal-carrito #contenedorCarrito .productoEnCarrito .img-carrito {
+  width: 18px;
+  height: 25px;
+}
+
+.modal-contenedor .modal-carrito #contenedorCarrito .productoEnCarrito .img-carrito img {
+  width: 100%;
+  height: 100%;
+}
+
+.modal-contenedor .modal-carrito #contenedorCarrito .productoEnCarrito .boton-eliminar {
+  background-color: red;
+  color: white;
+  border: none;
+  font-size: 1em;
+  padding: 1%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-contenedor .modal-carrito #contenedorCarrito .productoEnCarrito:hover {
+  background-color: #f2b1b1;
+}
+
+.modal-contenedor .modal-carrito .contenedorPrecioCierre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal-contenedor .modal-carrito .contenedorPrecioCierre .precioProducto {
+  font-size: 1.5em;
+}
+
+.modal-contenedor .modal-carrito .contenedorPrecioCierre .botonesModal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.modal-contenedor .modal-carrito .contenedorPrecioCierre .botonesModal #irPagar {
+  font-size: 1.5em;
+  color: white;
+  border: none;
+  background-color: green;
+  padding: 2%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.modal-contenedor .modal-carrito .contenedorPrecioCierre .botonesModal #carritoCerrar {
+  font-size: 1.5em;
+  color: white;
+  border: none;
+  background-color: red;
+  padding: 2%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 5;
+}
+
+.modal-active .modal-carrito {
+  margin-top: 0;
+}
+
+.contenedor-pagar {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  background-color: rgba(0, 0, 0, 0.616);
+}
+
+.contenedor-pagar .modal-pagar {
+  position: relative;
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: auto;
+  padding: 10px;
+  -webkit-transition: all .5s;
+  transition: all .5s;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contenedor-pagar .modal-pagar h3 {
+  text-align: center;
+}
+
+.contenedor-pagar .modal-pagar #contenedorPago {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 1%;
+  margin: 1%;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.contenedor-pagar .modal-pagar #contenedorPago #seccionMetodoPago {
+  margin: 1%;
+  font-size: 1.1em;
+}
+
+.contenedor-pagar .modal-pagar #contenedorPago #contenedorMetodoPago #contenedorEfectivo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 1%;
+}
+
+.contenedor-pagar .modal-pagar #contenedorPago #contenedorMetodoPago #contenedorEfectivo #totalPago {
+  font-size: 2em;
+}
+
+.contenedor-pagar .modal-pagar #contenedorPago #contenedorMetodoPago #contenedorTarjeta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  margin: 1%;
+}
+
+.contenedor-pagar .modal-pagar #contenedorPago #contenedorMetodoPago #contenedorTarjeta #calcularCuotas {
+  margin: 1%;
+  font-size: 1.1em;
+}
+
+.contenedor-pagar .modal-pagar #contenedorPago #contenedorMetodoPago #contenedorTarjeta #precioCuotas {
+  font-size: 1.1em;
+}
+
+.contenedor-pagar .modal-pagar #pagosBotones {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.contenedor-pagar .modal-pagar #pagosBotones #continuarCompra {
+  padding: 1%;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.contenedor-pagar .modal-pagar #pagosBotones #pagarCerrar {
+  padding: 1%;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+.modal-activado {
+  opacity: 1;
+  visibility: visible;
+  z-index: 100;
+}
+
+#error {
+  position: fixed;
+  top: 0;
+  z-index: 500;
+  background-color: red;
+  color: white;
+  padding: 3%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #relojTemporizador {
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+main #relojTemporizador .reloj {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#e66465), to(#9198e5));
+  background: linear-gradient(#e66465, #9198e5);
+  width: 5em;
+  height: 5em;
+  border-radius: 5px;
+}
+
+main #relojTemporizador .reloj__numeros {
+  font-size: 2.2em;
+  font-weight: 900;
+}
+
+main #relojTemporizador .reloj p {
+  color: white;
+}
+
+.carrusel {
+  width: 100%;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  overflow: hidden;
+  height: auto;
+  background-color: black;
+  padding-top: 2em;
+  height: 100%;
+}
+
+.carrusel .contenedorCarrusel {
+  width: 300%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  height: 100%;
+}
+
+.carrusel .contenedorCarrusel__img {
+  width: calc(100%/3);
+  overflow-y: hidden;
+  margin: 3px;
+}
+
+.carrusel .puntos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: transparent;
+  position: relative;
+  top: -50px;
+}
+
+.carrusel .puntos .punto {
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.6);
+  margin: 1em;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.carrusel .puntos .punto:hover {
+  background-color: #e899dc;
+  background-image: linear-gradient(315deg, #e899dc 0%, #d387ab 74%);
+}
+
+.carrusel .puntos .punto__activado {
+  background-color: #a4508b;
+  background-image: linear-gradient(326deg, #a4508b 0%, #5f0a87 74%);
+}
+
+@media screen and (min-width: 1024px) {
+  .carrusel .contenedorCarrusel {
+    height: 30em;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+
+.formulario {
+  background-color: white;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  grid-gap: 5px;
+  background-color: black;
+  color: white;
+}
+
+.formulario__contenedor--input {
+  position: relative;
+}
+
+.formulario__contenedor--input .input {
+  width: 100%;
+  background-color: white;
+  border: 3px solid transparent;
+  height: 30px;
+  line-height: 40px;
+  -webkit-transition: .3s ease all;
+  transition: .3s ease all;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+.formulario__contenedor--input .input:focus {
+  outline: none;
+  -webkit-box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.8);
+          box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.8);
+  border: 3px solid lightblue;
+}
+
+.formulario__contenedor--input .validacionEstado {
+  position: absolute;
+  right: 10px;
+  bottom: 7px;
+  opacity: 0;
+}
+
+.formulario__contenedor--correcto .validacionEstado {
+  color: greenyellow;
+  opacity: 1;
+}
+
+.formulario__contenedor--incorrecto .input {
+  border: 3px solid red;
+}
+
+.formulario__contenedor--incorrecto .input:focus {
+  border: 3px solid red;
+}
+
+.formulario__contenedor--incorrecto .validacionEstado {
+  color: red;
+  opacity: 1;
+}
+
+.formulario__contenedor--mensajeError {
+  color: red;
+  display: none;
+}
+
+.formulario__contenedor--mensajeError-active {
+  display: block;
+}
+
+.formulario__contenedor .formularioCheckbox {
+  margin-right: 10px;
+}
+
+.formulario__mensaje {
+  background-color: red;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  display: none;
+}
+
+.formulario__mensaje p {
+  margin: 0;
+}
+
+.formulario__mensaje--active {
+  display: block;
+}
+
+.formulario__enviado {
+  background-color: green;
+  text-align: center;
+  height: 40px;
+  line-height: 40px;
+  display: none;
+  color: white;
+}
+
+.formulario__enviado p {
+  margin: 0;
+}
+
+.formulario__enviado--active {
+  display: block;
+}
+
+.formulario__btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.formulario__btn--enviar {
+  background-color: green;
+  width: 30%;
+  line-height: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+  -webkit-transition: .1s ease all;
+  transition: .1s ease all;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.formulario__btn--enviar:hover {
+  -webkit-box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.9);
+          box-shadow: 3px 0px 30px rgba(163, 163, 163, 0.9);
+}
+
+* {
+  /* selector universal */
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+
+/* HEADER */
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: white;
+  padding: 2%;
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  max-height: 200px;
+  border-bottom: 1px solid black;
+  -webkit-box-shadow: 5px 10px 18px #888888;
+          box-shadow: 5px 10px 18px #888888;
+}
+
+.header__logo {
+  width: 150px;
+  height: auto;
+}
+
+.header__logo--img {
+  width: 100%;
+  height: 100%;
+}
+
+.header #btn-carrito {
+  cursor: pointer;
+  border: 1px solid black;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  color: black;
+}
+
+.header #btn-carrito .icon-carrito {
+  font-size: 1.5rem;
+}
+
+.header #btn-carrito #contadorCarrito {
+  font-size: 1rem;
+  position: absolute;
+  right: -8px;
+  top: -8px;
+  width: 25px;
+  height: 25px;
+  background-color: gray;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 50%;
+}
+
+.header #btn-carrito:hover {
+  background-color: black;
+  color: white;
+}
+
+.header #btn-carrito:hover .icon-carrito {
+  font-size: 1.5rem;
+}
+
+/* MAIN */
+main h3 {
+  font-size: 1.5em;
+  color: white;
+  background-color: black;
+  text-align: center;
+  padding: 1em;
+}
+
+main #seccionPrincipal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #seccionPrincipal #seccionFiltros {
+  background-color: black;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+}
+
+main #seccionPrincipal #seccionFiltros #buscador {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  width: 100%;
+}
+
+main #seccionPrincipal #seccionFiltros #buscador p {
+  width: 100%;
+}
+
+main #seccionPrincipal #seccionFiltros #buscador .search {
+  width: 100%;
+}
+
+main #seccionPrincipal #seccionFiltros #filtrarNombre {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  padding: 1rem;
+  width: 100%;
+}
+
+main #seccionPrincipal #seccionFiltros #filtrarNombre p {
+  width: 100%;
+}
+
+main #seccionPrincipal #seccionFiltros #filtrarNombre #filtroNombre {
+  width: 100%;
+}
+
+main #seccionPrincipal #contenedorProductos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 20em;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor {
+  border: 1px solid grey;
+  padding: 1rem;
+  margin: 1em;
+  font-family: "Open Sans Condensed", sans-serif;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.6);
+          box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.6);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor h2 {
+  font-size: 1.2em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 10px;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .img__contenedor {
+  width: 180px;
+  height: 250px;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .img__contenedor img {
+  width: 100%;
+  height: 100%;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .tomo__p {
+  position: relative;
+  right: -70px;
+  top: -40px;
+  background-color: black;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  color: white;
+  font-weight: 900;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-transform: uppercase;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .tomo__p .parrafo__tomos {
+  font-size: 1.4em;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .contenedor__precio {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .contenedor__precio p {
+  font-size: 1.8em;
+  font-weight: 900;
+  padding: 10px;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .contenedor__precio .btn-agregar {
+  border: none;
+  background-color: lightblue;
+  font-size: 1.1em;
+  padding: 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+  cursor: pointer;
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  color: white;
+}
+
+main #seccionPrincipal #contenedorProductos .producto__contenedor .contenedor__precio .btn-agregar:hover {
+  background-color: #a40606;
+  background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+}
+
+/* FOOTER */
+footer {
+  background-color: black;
+  padding: 1%;
+}
+
+footer .seccionRedes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+footer .seccionRedes__titulo {
+  color: white;
+  font-size: 2em;
+}
+
+footer .seccionRedes__redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 200px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+footer .seccionRedes__redes--instagram {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  margin: 1em;
+  -webkit-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+  text-decoration: none;
+  color: black;
+}
+
+footer .seccionRedes__redes--instagram:hover {
+  background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+  color: white;
+}
+
+footer .seccionRedes__redes--twitter {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  margin: 1em;
+  -webkit-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+  text-decoration: none;
+  color: black;
+}
+
+footer .seccionRedes__redes--twitter:hover {
+  background-color: #62cbee;
+  color: white;
+}
+
+footer .seccionRedes__redes--facebook {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: white;
+  border-radius: 50%;
+  margin: 1em;
+  -webkit-transition: all 500ms ease-in;
+  transition: all 500ms ease-in;
+  text-decoration: none;
+  color: black;
+}
+
+footer .seccionRedes__redes--facebook:hover {
+  background-color: blue;
+  color: white;
+}
+
+.contenedorProductoAgregado {
+  display: none;
+  position: fixed;
+  width: auto;
+  height: auto;
+  padding: 1%;
+  bottom: 10px;
+  right: 10px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  z-index: 200;
+}
+
+main #seccionPrincipal #seccionFiltros {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+main #seccionPrincipal #contenedorProductos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+main #seccionPrincipal #contenedorProductos .filter {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
