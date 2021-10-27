@@ -75,6 +75,8 @@ function mostrarFormularioEfectivo(){
                                                     <p><i class="fa fa-check" aria-hidden="true"></i> ¡Compra confirmada!</p>
                                                 </div>`);
                 document.getElementById('formulario__enviado').classList.add('formulario__enviado--active');
+                $('#contenedorCarrito').empty()
+                vaciarCarrito()
                 document.querySelectorAll('.formulario__contenedor--correcto').forEach((icono) => {
                     icono.classList.remove('formulario__contenedor--correcto');
                 });
@@ -272,6 +274,8 @@ function mostrarFormularioTarjeta(){
                                                 <p><i class="fa fa-check" aria-hidden="true"></i> ¡Compra confirmada!</p>
                                             </div>`);
             document.getElementById('formulario__enviado').classList.add('formulario__enviado--active');
+            $('#contenedorCarrito').empty()
+            vaciarCarrito()
             document.querySelectorAll('.formulario__contenedor--correcto').forEach((icono) => {
                 icono.classList.remove('formulario__contenedor--correcto');
             });

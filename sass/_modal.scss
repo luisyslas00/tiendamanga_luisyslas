@@ -122,7 +122,7 @@
         background-color: black;
         color: white;
         width: 100%;
-        height: auto;
+        height: 100%;
         padding: 10px;
         transition: all .5s;
         display: flex;
@@ -133,9 +133,6 @@
         #contenedorPago{
             display: flex;
             flex-direction: column;
-            padding: 1%;
-            margin: 1%;
-            border: 1px solid black;
             align-items: center;
             justify-content: center;
             #seccionMetodoPago{

@@ -89,6 +89,7 @@ function agregarAlCarrito(id){
         carritoCompras.push(productoAgregar)
         productoAgregar.cantidad =1;
         actualizarCarrito();
+        guardarLocal();
         $('#contenedorCarrito').append(`    <div class="productoEnCarrito">
                                                 <div class="img-carrito">
                                                     <img src="${productoAgregar.img}">
@@ -136,13 +137,31 @@ function obtenerLocal(){
     }    
 }
 
+
 //Vaciar Carrito
 
 function vaciarCarrito(){
     carritoCompras = [];
     localStorage.clear()
-    agregarAlCarrito()
+    precioTotal = 0;
+    $('#precioTotal').html(precioTotal)
 }
+
+//Funcionamiento del Modal Carrito
+
+$('#btn-carrito').click(function(){
+    $('.modal-contenedor').toggleClass('modal-active');
+}) 
+$('#carritoCerrar').click(function(){
+    $('.modal-contenedor').toggleClass('modal-active')
+}) 
+$('.modal-carrito').click(function(e){
+    e.stopPropagation()
+})
+$('.modal-contenedor').click(function(){
+    $('#carritoCerrar').click()
+})
+
 
 //Creando el contenedor de Pago
 
@@ -238,6 +257,7 @@ $('#irPagar').click(function(){
 $('#pagarCerrar').click(function(){
     $('.contenedor-pagar').toggleClass('modal-activado');
     $('#contenedorMetodoPago').empty()
+    $('#continuarCompra').show()
 })
 $('.modal-pagar').click(function(e){
     e.stopPropagation()
@@ -252,9 +272,11 @@ $('#continuarCompra').click(function(){
     if($('#seccionMetodoPago').val()=='efectivo'||$('#seccionMetodoPago').val()=='tarjeta'){
         if(precioTotal!=0 && $('#seccionMetodoPago').val()=='efectivo'){
             mostrarFormularioEfectivo()
+            $('#continuarCompra').hide()
         }
         else if(precioTotal!=0 && (($('#seccionMetodoPago').val() == 'tarjeta') && ($('#calcularCuotas').val() == '1') || ($('#calcularCuotas').val() == '3') || ($('#calcularCuotas').val() == '6') || ($('#calcularCuotas').val() == '12'))){
             mostrarFormularioTarjeta()
+            $('#continuarCompra').hide()
         }
         else if(precioTotal!=0 && $(($('#seccionMetodoPago').val() == 'tarjeta') && ($('#calcularCuotas').val() != '1') || ($('#calcularCuotas').val() != '3') || ($('#calcularCuotas').val() != '6') || ($('#calcularCuotas').val() != '12'))){
             Toastify({
@@ -286,20 +308,6 @@ $('#continuarCompra').click(function(){
     }
 })
 
-//Funcionamiento del Modal Carrito
-
-$('#btn-carrito').click(function(){
-    $('.modal-contenedor').toggleClass('modal-active');
-}) 
-$('#carritoCerrar').click(function(){
-    $('.modal-contenedor').toggleClass('modal-active')
-}) 
-$('.modal-carrito').click(function(e){
-    e.stopPropagation()
-})
-$('.modal-contenedor').click(function(){
-    $('#carritoCerrar').click()
-})
 
 //Carrusel
 
@@ -379,4 +387,3 @@ function buscador(input,selector){
         };
     })
 }
-

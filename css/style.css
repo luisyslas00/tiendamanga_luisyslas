@@ -181,7 +181,7 @@
   background-color: black;
   color: white;
   width: 100%;
-  height: auto;
+  height: 100%;
   padding: 10px;
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -206,9 +206,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 1%;
-  margin: 1%;
-  border: 1px solid black;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
