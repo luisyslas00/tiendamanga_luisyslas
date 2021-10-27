@@ -1,93 +1,3 @@
-function mostrarFormularioEfectivo(){
-    $('#formularioEfectivo').append(`
-    <form action="" id="formulario" class="formulario">
-            <h5>Complete sus datos</h5>
-        
-            <div class="formulario__contenedor" id="formulario__nombre">
-                <div class="formulario__contenedor--input">
-                    <input type="text" class="input" name="nombre" id="nombre" placeholder="Nombre">
-                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
-                </div>
-                <p class="formulario__contenedor--mensajeError">No se admiten números y carácteres especiales</p>
-            </div>
-        
-            <div class="formulario__contenedor" id="formulario__apellido">
-                <div class="formulario__contenedor--input">
-                    <input type="text" class="input" name="apellido" id="apellido" placeholder="Apellido">
-                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
-                </div>
-                <p class="formulario__contenedor--mensajeError">No se admiten números y carácteres especiales</p>
-            </div>
-        
-            <div class="formulario__contenedor" id="formulario__email">
-                <div class="formulario__contenedor--input">
-                    <input type="email" class="input" name="email" id="email" placeholder="Correo Electrónico">
-                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
-                </div>
-                <p class="formulario__contenedor--mensajeError">Se admiten letras, números, @, puntos, guiones y guion bajo</p>
-            </div>
-        
-            <div class="formulario__contenedor" id="formulario__direccion">
-                <div class="formulario__contenedor--input">
-                    <input type="text" class="input" name="direccion" id="direccion" placeholder="Dirección">
-                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
-                </div>
-                <p class="formulario__contenedor--mensajeError">No se admiten carácteres especiales</p>
-            </div>
-        
-            <div class="formulario__contenedor" id="formulario__terminos">
-                <input type="checkbox" class="input formularioCheckbox" name="terminos" id="terminos">Acepto los términos y Condiciones
-            </div>
-        
-            <div class="formulario__enviado" id="formulario__enviado">
-                <p><i class="fa fa-check" aria-hidden="true"></i> ¡Compra confirmada!</p>
-            </div>
-        
-            <div class="formulario__mensaje" id="formulario__mensaje">
-                <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Complete el formulario</p>
-            </div>
-        
-            <div class="formulario__contenedor formulario__btn">
-                <button type="submit" class="formulario__btn--enviar">Confirmar</button>
-            </div>
-        </form>`)
-
-        //Creo variables
-
-        const formulario = document.getElementById('formulario');
-        const inputs = document.querySelectorAll('#formulario input');
-            
-        //Válido los carácteres
-
-        inputs.forEach((input)=>{
-            input.addEventListener('keyup',validarFormulario)
-        })
-
-        //Válido el formulario al enviarlo
-
-        formulario.addEventListener('submit',(e)=>{
-            e.preventDefault(e);
-            const terminos = document.getElementById('terminos')
-            if(campos.nombre && campos.apellido && campos.email && campos.direccion && terminos.checked ){
-                formulario.reset();
-                $('#contenedorPago').empty()
-                $('#contenedorPago').append(`   <div class="formulario__enviado" id="formulario__enviado">
-                                                    <p><i class="fa fa-check" aria-hidden="true"></i> ¡Compra confirmada!</p>
-                                                </div>`);
-                document.getElementById('formulario__enviado').classList.add('formulario__enviado--active');
-                $('#contenedorCarrito').empty()
-                vaciarCarrito()
-                document.querySelectorAll('.formulario__contenedor--correcto').forEach((icono) => {
-                    icono.classList.remove('formulario__contenedor--correcto');
-                });
-            } 
-            else{
-                document.getElementById('formulario__enviado').classList.remove('formulario__enviado--active');
-                document.getElementById('formulario__mensaje').classList.add('formulario__mensaje--active');
-            }
-        })
-}
-
 //Creo expresiones donde pido ciertas condiciones para los inputs
 
 const expresiones = {
@@ -98,7 +8,7 @@ const expresiones = {
     numeroTarjeta: /^\d{16}$/,
     nombreTarjeta: /^[a-zA-ZÁ-ÿ\s]{3,20}$/,
     expiracion:/^\d{4}$/,
-    codigoSeguridad:/^\d{4}$/,
+    codigoSeguridad:/^\d{3,4}$/,
 }
 
 //Los inputs sean falsos al iniciar
@@ -165,7 +75,99 @@ function validarInput(expresion, input, campo){
     }
 }
 
-//Formulario Tarjeta
+//Función para mostrar el formulario de pago en efectivo
+
+function mostrarFormularioEfectivo(){
+    $('#formularioEfectivo').append(`
+    <form action="" id="formulario" class="formulario">
+            <h5>Complete sus datos</h5>
+        
+            <div class="formulario__contenedor" id="formulario__nombre">
+                <div class="formulario__contenedor--input">
+                    <input type="text" class="input" name="nombre" id="nombre" placeholder="Nombre">
+                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+                </div>
+                <p class="formulario__contenedor--mensajeError">No se admiten números y carácteres especiales</p>
+            </div>
+        
+            <div class="formulario__contenedor" id="formulario__apellido">
+                <div class="formulario__contenedor--input">
+                    <input type="text" class="input" name="apellido" id="apellido" placeholder="Apellido">
+                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+                </div>
+                <p class="formulario__contenedor--mensajeError">No se admiten números y carácteres especiales</p>
+            </div>
+        
+            <div class="formulario__contenedor" id="formulario__email">
+                <div class="formulario__contenedor--input">
+                    <input type="email" class="input" name="email" id="email" placeholder="Correo Electrónico">
+                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+                </div>
+                <p class="formulario__contenedor--mensajeError">Se admiten letras, números, @, puntos, guiones y guion bajo</p>
+            </div>
+        
+            <div class="formulario__contenedor" id="formulario__direccion">
+                <div class="formulario__contenedor--input">
+                    <input type="text" class="input" name="direccion" id="direccion" placeholder="Dirección">
+                    <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
+                </div>
+                <p class="formulario__contenedor--mensajeError">No se admiten carácteres especiales</p>
+            </div>
+        
+            <div class="formulario__contenedor" id="formulario__terminos">
+                <input type="checkbox" class="input formularioCheckbox" name="terminos" id="terminos">Acepto los términos y Condiciones
+            </div>
+        
+            <div class="formulario__enviado" id="formulario__enviado">
+                <p><i class="fa fa-check" aria-hidden="true"></i> ¡Compra confirmada!</p>
+            </div>
+        
+            <div class="formulario__mensaje" id="formulario__mensaje">
+                <p><i class="fa fa-exclamation-circle" aria-hidden="true"></i> Complete el formulario</p>
+            </div>
+        
+            <div class="formulario__contenedor formulario__btn">
+                <button type="submit" class="formulario__btn--enviar">Confirmar</button>
+            </div>
+        </form>`)
+
+        //Creo variables
+
+        const formulario = document.getElementById('formulario');
+        const inputs = document.querySelectorAll('#formulario input');
+            
+        //Válido los carácteres al presionar teclas
+
+        inputs.forEach((input)=>{
+            input.addEventListener('keyup',validarFormulario)
+        })
+
+        //Válido el formulario al enviarlo
+
+        formulario.addEventListener('submit',(e)=>{
+            e.preventDefault(e);
+            const terminos = document.getElementById('terminos')
+            if(campos.nombre && campos.apellido && campos.email && campos.direccion && terminos.checked ){
+                formulario.reset();
+                $('#contenedorPago').empty()
+                $('#contenedorPago').append(`   <div class="formulario__enviado" id="formulario__enviado">
+                                                    <p><i class="fa fa-check" aria-hidden="true"></i> ¡Compra confirmada!</p>
+                                                </div>`);
+                document.getElementById('formulario__enviado').classList.add('formulario__enviado--active');
+                $('#contenedorCarrito').empty()
+                vaciarCarrito()
+                document.querySelectorAll('.formulario__contenedor--correcto').forEach((icono) => {
+                    icono.classList.remove('formulario__contenedor--correcto');
+                });
+            } 
+            else{
+                document.getElementById('formulario__enviado').classList.remove('formulario__enviado--active');
+                document.getElementById('formulario__mensaje').classList.add('formulario__mensaje--active');
+            }
+        })
+}
+
+//Formulario para mostrar el formulario de pago en Tarjeta
 
 function mostrarFormularioTarjeta(){
     $('#formularioTarjeta').append(`<form action="" id="formulario" class="formulario">
@@ -231,7 +233,7 @@ function mostrarFormularioTarjeta(){
                                                 <input type="number" class="input" name="codigoSeguridad" id="codigoSeguridad" placeholder="Código de seguridad">
                                                 <i class="fa fa-times-circle validacionEstado" aria-hidden="true"></i>
                                             </div>
-                                            <p class="formulario__contenedor--mensajeError">Debe introducir los 3 o 4 dígitos de seguridad del reverso de su tarjeta XXX</p>
+                                            <p class="formulario__contenedor--mensajeError">Debe introducir los 3 o 4 dígitos de seguridad del reverso de su tarjeta XXXX</p>
                                         </div>
 
                                         <div class="formulario__contenedor" id="formulario__terminos">

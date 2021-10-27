@@ -137,7 +137,6 @@ function obtenerLocal(){
     }    
 }
 
-
 //Vaciar Carrito
 
 function vaciarCarrito(){
@@ -178,7 +177,7 @@ function contenedorPago(){
     selecionPago()
 }
 
-//Función para selecionar el método de pago
+//Función para selecionar el método de pago, efectivo o tarjeta
 
 function selecionPago(){
     $('#seccionMetodoPago').on('change',()=>{                                   
